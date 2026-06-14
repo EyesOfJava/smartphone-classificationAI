@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CUSTOM SMOOTH SLIDER */
+
+.custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.custom-slider:hover {
+  background: #dbe4f0;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #2563eb
+  );
+
+  cursor: pointer;
+
+  border: 4px solid white;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.15);
+
+  transition: all 0.2s ease;
+}
+
+.custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+.custom-slider::-moz-range-thumb {
+
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #2563eb
+  );
+
+  cursor: pointer;
+}
+
+
+/* SMOOTH SLIDER */
+
+.custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  height: 12px;
+
+  border-radius: 999px;
+
+  background: #e2e8f0;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.custom-slider:hover {
+  background: #d8dee9;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 26px;
+  height: 26px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #2563eb
+  );
+
+  border: 4px solid white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.15);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.2);
+}
+
+.custom-slider::-moz-range-thumb {
+
+  width: 26px;
+  height: 26px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #2563eb
+  );
+
+  cursor: pointer;
+}
